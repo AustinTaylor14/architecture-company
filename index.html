@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>East River Architecture</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo1x.png" alt="East River Architecture Logo">
+            <h1>East River Architecture</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">Learn</a></li>
+                <li><a href="#">Practice</a></li>
+                <li><a href="#">Implement</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <picture class="hero">
+            <source media="(min-width: 300px) and (max-width: 699px)" srcset="images/hero-small.webp">
+            <source media="(min-width: 700px) and (max-width: 1099px)" srcset="images/hero-medium.webp">
+            <source media="(min-width: 1100px)" srcset="images/hero-large.webp">
+            <img src="images/hero-default.webp" alt="Architecture Design" width="150" height="75">
+        </picture>
+
+        <section class="video-section">
+            <h2>My Video with Captions</h2>
+            <video controls>
+                <source src="media/trimmed_hb.mp4" type="video/mp4" />
+                <source src="video/trimmed_hb.webm" type="video/webm" />
+                <track
+                  label="English"
+                  kind="subtitles"
+                  srclang="en"
+                  src="media/austin-en.vtt"
+                  default />
+                <track
+                  label="Español"
+                  kind="subtitles"
+                  srclang="es"
+                  src="media/austin-es.vtt" />
+              </video>
+            <details>
+                <summary>Video Transcript</summary>
+                <pre id="transcript"></pre>
+            </details>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 &bull; Austin Taylor</p>
+    </footer>
+
+    <script>
+        // Load the transcript dynamically
+        fetch('transcript.txt')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('transcript').textContent = data;
+            });
+    </script>
+</body>
+</html>

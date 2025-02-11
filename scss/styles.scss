@@ -1,0 +1,53 @@
+@import "normalize";
+
+@import "variables";
+
+@import "small";
+
+//35em is also 560px (if basefont is 16px)
+@media only screen and (min-width: 35rem) {
+	@import "medium";
+}
+
+//64em is also 1028px (if basefont is 16px)
+@media only screen and (min-width: 64rem) {
+	@import "large";
+} 
+@import "normalize";
+@import "variables";
+@import "small";
+@import "medium";
+@import "large";
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: $text-color;
+}
+
+header {
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    nav ul {
+        padding: $gutter 0;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: $text-color;
+
+        &.active {
+            text-decoration: underline wavy $text-color;
+        }
+    }
+}
+
+footer {
+    text-align: center;
+    padding: $gutter;
+    background-color: $primary-color;
+    color: $secondary-color;
+}

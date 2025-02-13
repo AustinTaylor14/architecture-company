@@ -13,16 +13,18 @@ header {
     nav {
         flex-shrink: 0;
         width: 100%;
+        
         ul {
             display: flex;
             flex-direction: column;
             gap: 0.5rem;
-            padding-right: 20px;
+            
             background-color: $secondary-color;
+            list-style-type: none;
             li a{
                 display: block;
                 &:hover {
-                    color: white;
+                    color: darkblue;
                 }
             }
         }

@@ -320,14 +320,14 @@ header nav ul {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding-right: 20px;
   background-color: #fff;
+  list-style-type: none;
 }
 header nav ul li a {
   display: block;
 }
 header nav ul li a:hover {
-  color: white;
+  color: darkblue;
 }
 
 picture img {
@@ -700,14 +700,14 @@ header nav ul {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  padding-right: 20px;
   background-color: #fff;
+  list-style-type: none;
 }
 header nav ul li a {
   display: block;
 }
 header nav ul li a:hover {
-  color: white;
+  color: darkblue;
 }
 
 picture img {
@@ -769,7 +769,7 @@ header .logo {
   align-items: center;
 }
 header nav ul {
-  padding: 10px 0;
+  padding: 10px 10px;
 }
 header nav a {
   text-decoration: none;
